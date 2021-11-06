@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import CarComponent from './components/CarComponent';
+// Importing our theme provider which will make our global state available to child components
+import CarProvider from './utils/CarContext';
 
-function App() {
+export default function App() {
+  useEffect(() => {
+    document.title = 'Digital Garage';
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CarProvider>
+      <CarComponent />
+    </CarProvider>
   );
 }
-
-export default App;
