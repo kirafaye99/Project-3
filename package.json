@@ -4,7 +4,6 @@
   "description": "",
   "main": "server/server.js",
   "dependencies": {
-    "concurrently": "^5.1.0",
     "@craco/craco": "^6.4.0",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.5",
