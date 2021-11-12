@@ -54,7 +54,7 @@ function Nav() {
           <a href="#" class="text-base font-medium text-white hover:text-indigo-50" key="Pricing">
             Dashboard
           </a>
-        <Link to="/orderHistory" class="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Order History</Link>
+        <Link to="/orderHistory" class="text-base font-medium text-white hover:text-indigo-50">Order History</Link>
         <a to="/" onClick={() => Auth.logout()} class="cursor-pointer inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50">Sign out</a>
       </div>
       );
@@ -69,13 +69,14 @@ function Nav() {
   }
 
   return (
+    <div>
     <header class="bg-indigo-600">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
     <div class="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
       <div class="flex items-center">
         <Link to="/">
           <span class="sr-only">Workflow</span>
-          {/* <p class="text-base font-medium text-white">Geek Emporium</p> */}
+          {/* <p class="text-base font-medium text-white hover:text-indigo-50">Geek Emporium</p> */}
         </Link>
         <div class="hidden ml-10 space-x-8 lg:block">
           <div class="dropdown inline-block relative">
@@ -104,6 +105,14 @@ function Nav() {
     </div>
   </nav>
 </header>
+      <Link
+        to="/"
+        class="text-3xl font-extrabold text-transparent sm:text-6xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 flex justify-center"
+      >
+        Geek Emporium
+      </Link>
+</div>
+
   );
 }
 
