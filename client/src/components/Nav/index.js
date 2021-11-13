@@ -51,9 +51,7 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <div class="ml-10 space-x-4">
-          {/* <a href="#" class="text-base font-medium text-white hover:text-indigo-50" key="Pricing">
-            Dashboard
-          </a> */}
+
         <Link to="/dashboard" class="text-base font-medium text-white hover:text-indigo-50">Dashboard</Link>
         <Link to="/orderHistory" class="text-base font-medium text-white hover:text-indigo-50">Order History</Link>
         <a to="/" onClick={() => Auth.logout()} class="cursor-pointer inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50">Sign out</a>
@@ -82,9 +80,9 @@ function Nav() {
         <div class="hidden ml-10 space-x-8 lg:block">
           <div class="dropdown inline-block relative">
           <button>
-          <a href="#" class="text-base font-medium text-white hover:text-indigo-50" key="Solutions">
+          <p class="text-base font-medium text-white hover:text-indigo-50" key="Solutions">
             Categories
-          </a>
+          </p>
           </button>
           <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
             {categories.map((item) => (
