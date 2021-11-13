@@ -37,33 +37,67 @@ const CartItem = ({ item }) => {
   }
 
   return (
-    <div className="flex-row">
-      <div>
-        <img
-          src={`/images/${item.image}`}
-          alt=""
-        />
-      </div>
-      <div>
-        <div>{item.name}, ${item.price}</div>
-        <div>
-          {/* <span>Qty:</span>
-          <input
-            type="number"
-            placeholder="1"
-            value={item.purchaseQuantity}
-            onChange={onChange}
-          /> */}
-          <span
-            role="img"
-            aria-label="trash"
-            onClick={() => removeFromCart(item)}
-          >
-            🗑️
-          </span>
-        </div>
-      </div>
-    </div>
+    // <div className="flex-row">
+    //   <div>
+    //     <img
+    //       src={`/images/${item.image}`}
+    //       alt=""
+    //     />
+    //   </div>
+    //   <div>
+    //     <div>{item.name}, ${item.price}</div>
+    //     <div>
+    //       {/* <span>Qty:</span>
+    //       <input
+    //         type="number"
+    //         placeholder="1"
+    //         value={item.purchaseQuantity}
+    //         onChange={onChange}
+    //       /> */}
+    //       <span
+    //         role="img"
+    //         aria-label="trash"
+    //         onClick={() => removeFromCart(item)}
+    //       >
+    //         🗑️
+    //       </span>
+    //     </div>
+    //   </div>
+    // </div>
+
+<div>
+
+<div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
+                      <img src={`/images/${item.image}`} alt="" class="w-full h-full object-center object-cover"/>
+                    </div>
+
+                    <div class="ml-4 flex-1 flex flex-col">
+                      <div>
+                        <div class="flex justify-between text-base font-medium text-gray-900">
+                          <h3>
+                            <div>
+                            {item.name}
+                            </div>
+                          </h3>
+                          <p class="ml-4">
+                          {item.price}
+                          </p>
+                        </div>
+                        {/* <p class="mt-1 text-sm text-gray-500">
+                          Salmon
+                        </p> */}
+                      </div>
+                      <div class="flex-1 flex items-end justify-between text-sm">
+                        <p class="text-gray-500">
+                          Qty 1
+                        </p>
+
+                        <div class="flex">
+                          <button type="button" onClick={() => removeFromCart(item)} class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                        </div>
+                      </div>
+                    </div>
+</div>
   );
 }
 

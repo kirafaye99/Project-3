@@ -32,7 +32,7 @@
 }
 
 .cart-closed {
-  position: fixed;
+  position: absolute;
   top: 2%;
   right: 1%;
   font-size: 2rem;
@@ -44,9 +44,9 @@
   height: 50px;
 }
 
-.cart-closed:hover {
+/* .cart-closed:hover {
   transform: rotate(8deg);
-}
+} */
 
 .cart img {
   width: 70px;
