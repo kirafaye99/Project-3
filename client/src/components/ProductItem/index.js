@@ -40,19 +40,20 @@ function ProductItem(item) {
   }
 
   return (
-    <div className="card px-1 py-1">
+    <div className="rounded overflow-hidden shadow-lg bg-blue-100">
       <Link to={`/products/${_id}`}>
         <img
+          className="w-full"
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <p className="font-bold text-xl mb-2 text-center">{name}</p>
       </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
+      <div className="text-gray-700 text-center my-2">
+        {/* <div className="text-center">{quantity} {pluralize("item", quantity)} in stock</div> */}
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      {/* <button className="ml-32 my-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded" onClick={addToCart}>Add to cart</button> */}
     </div>
   );
 }
