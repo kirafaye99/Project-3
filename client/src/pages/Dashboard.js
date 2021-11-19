@@ -66,13 +66,13 @@ function Dashboard(){
       return<div>
       <div className="md:flex md:items-center md:justify-between bg-blue-500">
           <div className="flex-1 min-w-0">
-          <h1 className="text-2xl font-bold leading-7 text-white sm:text-3xl sm:truncate m-3">
+          <h1 className="text-2xl text-center font-bold leading-7 text-white sm:text-3xl sm:truncate m-3">
           Your Dashboard
           </h1>
           </div>
       </div>
       <button type="submit"
-              className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
+              className="inline-block m-10 bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
           
           <Link to="/">← Back to Products</Link>
           </button>
@@ -116,12 +116,12 @@ function Dashboard(){
       <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Attach Image</h2>
       <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
           <div className="space-y-1 text-center">
-          <svg className="m-5 mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
+          {/* <svg className="m-5 mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
            aria-hidden="true">
           <path
           d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>    
+          </svg>     */}
       <div className="flex justify-center text-sm text-gray-600">
         <label for="file-upload"
           className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
@@ -130,7 +130,7 @@ function Dashboard(){
           setImageSelected(event.target.files[0]);
               }}/>
               <Image className= "m-5"
-          style={{width: 1000}}
+          style={{width: 500}}
           cloudName="dxz1v5n4l"publicID={cloudinaryURL}/>
           <button onClick={uploadImage} className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"> Upload Image</button>
         </label>
@@ -139,16 +139,9 @@ function Dashboard(){
         PNG, JPG, GIF up to 10MB
            </p>
           </div>
-              <img style={{height: 1000}} />
+              <img style={{height: 100}} />
           </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-
-      <div className="mt-4 flex justify-center">
+          <div className="mt-4 flex justify-center">
           <button type="submit"
               onClick={refreshPage} className="inline-flex items-center pl-3 pr-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 new-post-btn">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
@@ -159,6 +152,24 @@ function Dashboard(){
           Create New Post
           </button>
       </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      {/* <div className="mt-4 flex justify-center">
+          <button type="submit"
+              onClick={refreshPage} className="inline-flex items-center pl-3 pr-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 new-post-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+              d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z"
+          clip-rule="evenodd" />
+          </svg>
+          Create New Post
+          </button>
+      </div> */}
 </div>
 }
 
