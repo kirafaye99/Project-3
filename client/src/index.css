@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* :root {
   --primary: #232F3E;
   --secondary: #F3A847;
@@ -137,13 +143,6 @@ input {
 input:focus {
   border: 1px solid var(--secondary);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
-}
-
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .flex-row {
