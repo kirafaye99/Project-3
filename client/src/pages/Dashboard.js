@@ -2,45 +2,25 @@ import React, {useState} from 'react';
 import Axios from 'axios';
 import {Image} from 'cloudinary-react';
 import { Link } from 'react-router-dom';
-import { Checkbox } from 'react-dom'
+import { MultiSelect } from "@progress/kendo-react-dropdowns";
+// import './dashboard.css'
+// import { Checkbox } from 'react-dom'
 // import { categories } from "./utils/categories";
 
+const tags = [  
+  "Cards",  
+  "Figurines",  
+  "Electronics",  
+  "Collectibles",  
+  "Comic Books",  
+  "Video Games",  
+  "Posters", 
+];
+
 function Dashboard(){
-    const [checkedOne, setCheckedOne] = React.useState(false);
-    const [checkedTwo, setCheckedTwo] = React.useState(false);
-    const [checkedThree, setCheckedThree] = React.useState(false);
-    const [checkedFour, setCheckedFour] = React.useState(false);
-    const [checkedFive, setCheckedFive] = React.useState(false);
-    const [checkedSix, setCheckedSix] = React.useState(false);
-    const [checkedSeven, setCheckedSeven] = React.useState(false);
-  
-    const handleChangeOne = () => {
-      setCheckedOne(!checkedOne);
-    };
-  
-    const handleChangeTwo = () => {
-      setCheckedTwo(!checkedTwo);
-    };
 
-    const handleChangeThree = () => {
-        setCheckedThree(!checkedThree);
-      };
-
-      const handleChangeFour = () => {
-        setCheckedFour(!checkedFour);
-      };
-
-      const handleChangeFive = () => {
-        setCheckedFive(!checkedFive);
-      };
-
-      const handleChangeSix = () => {
-        setCheckedSix(!checkedSix);
-      };
-
-      const handleChangeSeven = () => {
-        setCheckedSeven(!checkedSeven);
-      };
+  const [selectedTags, setSelectedTags] = useState([]);  
+  const onChange = event => setSelectedTags([...event.value]);
 
     const [imageSelected, setImageSelected] = useState("");
     const [cloudinaryURL, setCloudinaryURL] = useState("");
@@ -128,43 +108,10 @@ function Dashboard(){
         type="text"
         placeholder="Product Title"
       /></form>
-      <form className="form"class="leading-7 text-sm text-gray-600">
-      <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Category</h2>
-      <Checkbox
-        label="Cards"
-        value={checkedOne}
-        onChange={handleChangeOne}
-      />
-      <Checkbox
-        label="Figurines"
-        value={checkedTwo}
-        onChange={handleChangeTwo}
-      />
-      <Checkbox
-        label="Electronics"
-        value={checkedThree}
-        onChange={handleChangeThree}
-      />
-      <Checkbox
-        label="Collectibles"
-        value={checkedFour}
-        onChange={handleChangeFour}
-      />
-      <Checkbox
-        label="Comic Books"
-        value={checkedFive}
-        onChange={handleChangeFive}
-      />
-      <Checkbox
-        label="Video Games"
-        value={checkedSix}
-        onChange={handleChangeSix}
-      />
-      <Checkbox
-        label="Posters"
-        value={checkedSeven}
-        onChange={handleChangeSeven}
-      />
+      <form className="form"class="leading-7 text-sm text-gray-600 k-form k-my-8">
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Category</h2>
+          <label className="k-label k-mb-3">Choose Category</label>  
+          <MultiSelect data={tags} value={selectedTags} onChange={onChange} autoClose={false} />
       </form>
       <form className="form"class="leading-7 text-sm text-gray-600">
       <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Description</h2>
