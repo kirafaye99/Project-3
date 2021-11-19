@@ -45,7 +45,10 @@ function ProductList() {
 
   return (
     <div className="my-2">
-      <h2 className="max-w-xl mt-4 mx-auto text-xl text-gray-500 text-center">Your one stop shop for all your nerdy needs!</h2>
+      <div className="text-center">
+        <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">Your one stop shop for all your nerdy needs!</p>
+      </div>
+      
       {state.products.length ? (
         <div className="max-w-7xl mx-auto py-16 px-4 overflow-hidden sm:py-24 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">

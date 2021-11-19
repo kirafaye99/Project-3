@@ -9,6 +9,9 @@ db.once('open', async () => {
     { name: 'Figurines' },
     { name: 'Electronics' },
     { name: 'Collectibles' },
+    { name: 'Comic Books' },
+    { name: 'Video Games' },
+    { name: 'Posters' },
   ]);
 
   console.log('categories seeded');
@@ -30,7 +33,7 @@ db.once('open', async () => {
       description:
         'Original Chrono Trigger, mint condition.',
       image: 'chrono-trigger.jpg',
-      category: categories[2]._id,
+      category: categories[5]._id,
       price: 1500.00,
       quantity: 1
     },
@@ -78,51 +81,25 @@ db.once('open', async () => {
       image: 'thanos-gauntlet.jpg',
       price: 100000.99,
       quantity: 1
-    }
-    // {
-    //   name: 'Tales at Bedtime',
-    //   category: categories[3]._id,
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   quantity: 100
-    // },
-    // {
-    //   name: 'Spinning Top',
-    //   category: categories[4]._id,
-    //   description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-    //   image: 'spinning-top.jpg',
-    //   price: 1.99,
-    //   quantity: 1000
-    // },
-    // {
-    //   name: 'Set of Plastic Horses',
-    //   category: categories[4]._id,
-    //   description:
-    //     'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-    //   image: 'plastic-horses.jpg',
-    //   price: 2.99,
-    //   quantity: 1000
-    // },
-    // {
-    //   name: 'Teddy Bear',
-    //   category: categories[4]._id,
-    //   description:
-    //     'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-    //   image: 'teddy-bear.jpg',
-    //   price: 7.99,
-    //   quantity: 100
-    // },
-    // {
-    //   name: 'Alphabet Blocks',
-    //   category: categories[4]._id,
-    //   description:
-    //     'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-    //   image: 'alphabet-blocks.jpg',
-    //   price: 9.99,
-    //   quantity: 600
-    // }
+    },
+    {
+      name: 'Game of Thrones Signed Poster',
+      category: categories[6]._id,
+      description:
+        'Pay homage to Game Of Thrones, with this gallery-framed, officially licensed, limited edition facsimile of hand-signed mini poster, originally signed by Kit Harington, Emilia Clarke, Peter Dinklage, Lena Headey, Nikolaj Coster-Waldau, Jack Gleeson, Sean Bean, Michelle Fairley, Iain Glen, and Jason Momoa , of which is strictly limited to 100 units Worldwide, and has been approved and numbered accordingly.',
+      image: 'got-poster.jpg',
+      price: 200,
+      quantity: 1
+    },
+    {
+      name: 'Captain America Comics No 2',
+      category: categories[4]._id,
+      description:
+        'Read all about Captain America and all about how he saves the day',
+      image: 'captain-america-comic.jpeg',
+      price: 15000,
+      quantity: 1
+    },
   ]);
 
   console.log('products seeded');

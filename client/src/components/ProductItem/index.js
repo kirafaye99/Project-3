@@ -51,7 +51,7 @@ function ProductItem(item) {
       </Link>
       <div className="text-gray-700 text-center my-2">
         {/* <div className="text-center">{quantity} {pluralize("item", quantity)} in stock</div> */}
-        <span>${price}</span>
+        <span>$ {price}</span>
       </div>
       {/* <button className="ml-32 my-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded" onClick={addToCart}>Add to cart</button> */}
     </div>

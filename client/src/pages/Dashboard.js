@@ -2,8 +2,34 @@ import React, {useState} from 'react';
 import Axios from 'axios';
 import {Image} from 'cloudinary-react';
 import { Link } from 'react-router-dom';
+// import { categories } from "./utils/categories";
 
 function Dashboard(){
+
+    // const [checkedState, setCheckedState] = useState(
+    //     new Array(categories.length).fill(false)
+    //   );
+    
+    //   const [total, setTotal] = useState(0);
+    
+    //   const handleOnChange = (position) => {
+    //     const updatedCheckedState = checkedState.map((item, index) =>
+    //       index === position ? !item : item
+    //     );
+    
+    //     setCheckedState(updatedCheckedState);
+    
+    //     const totalPrice = updatedCheckedState.reduce(
+    //       (sum, currentState, index) => {
+    //         if (currentState === true) {
+    //           return sum + toppings[index].price;
+    //         }
+    //         return sum;
+    //       },
+    //       0
+    //     );
+    
+    //     setTotal(totalPrice);
 
     const [imageSelected, setImageSelected] = useState("");
 
