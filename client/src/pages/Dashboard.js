@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function Dashboard(){
 
     const [imageSelected, setImageSelected] = useState("");
+    const [cloudinaryURL, setCloudinaryURL] = useState("");
 
     const uploadImage = (files) => {
         const formData = new FormData()
@@ -14,7 +15,12 @@ function Dashboard(){
 
         Axios.post("https://api.cloudinary.com/v1_1/dxz1v5n4l/image/upload", formData).then((Response) => {
         console.log(Response);
+        console.log(Response.data);
+        console.log(Response.data.public_id);
+        let URL = `https://res.cloudinary.com/dxz1v5n4l/image/upload/v1632261892/${Response.data.public_id}.jpg`
+        setCloudinaryURL(URL);
         });
+
     };
 
     return<div>
@@ -64,7 +70,7 @@ function Dashboard(){
                 }}/>
                 <Image className= "m-5"
             style={{width: 1000}}
-            cloudName="dxz1v5n4l"publicID="https://res.cloudinary.com/dxz1v5n4l/image/upload/v1632261892/weltdwxohek6naudbyul.jpg"/>
+            cloudName="dxz1v5n4l"publicID={cloudinaryURL}/>
             <button onClick={uploadImage} className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"> Upload Image</button>
           </label>
         </div>
