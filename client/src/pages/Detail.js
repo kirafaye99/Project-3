@@ -99,7 +99,6 @@ function Detail() {
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
-            className="h-50 w-full object-cover "
           />
 
           <p className="text-lg">{currentProduct.description}</p>
